@@ -1,0 +1,156 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+  
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+    <header class="site-navbar container py-0 " role="banner">
+
+      <!-- <div class="container"> -->
+          <div class="row align-items-center">
+          
+            <div class="col-6 col-xl-2">
+              <h1 class="mb-0 site-logo"><a href="{% url 'inicio' %}" class="text-white mb-0">Portfolio</a></h1>
+            </div>
+            <div class="col-12 col-md-10 d-none d-xl-block">
+              <nav class="site-navigation position-relative text-right" role="navigation">
+  
+                <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+                  <li class="active"><a href="{% url 'inicio' %}">Inicio</a></li>
+                  <li><a href="{% url 'perfil' %}">Perfil</a></li>
+                  <li class="mr-5"><a href="{% url 'editar' %}">Editar</a></li>
+                  <li><a href="{% url 'contactenos' %}">Contactenos</a></li>
+                  <li class="mr-5"><a href="{% url 'nosotros' %}">Acerca de</a></li>
+  
+                  <li class="ml-xl-3 login"><a href="{% url 'login' %}"><span class="border-left pl-xl-4"></span>Ingreso</a></li>
+  
+                  <li><a href="{% url 'registros' %}" class="cta"><span class="bg-primary text-white rounded">Registro</span></a></li>
+                </ul>
+              </nav>
+            </div>
+    
+
+
+          <div class="d-inline-block d-xl-none ml-auto py-3 col-6 text-right" style="position: relative; top: 3px;">
+            <a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a>
+          </div>
+
+        </div>
+      <!-- </div> -->
+      
+    </header>
+
+  
+    <div class="site-blocks-cover inner-page-cover overlay banner" data-aos="fade" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+
+          <div class="col-md-10" data-aos="fade-up" data-aos-delay="400">
+            
+            
+            <div class="row justify-content-center mt-5">
+              <div class="col-md-8 text-center">
+                <h1>Edita tu perfil</h1>
+                <p class="mb-0">Edita los datos de tu perfil como: correo, telefono, dirección y más.</p>
+              </div>
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>      
+    
+        <div class="site-section bg-light">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-md-7 mb-5"  data-aos="fade">
+    
+                <h2 class="mb-5 text-primary"><strong>Editar perfil</strong></h2>
+                     
+                  <form action="#" class="p-5 bg-white" method = 'POST'>
+                    {% csrf_token %}
+                    {{ perfil_form.as_p }}
+                  
+                  <div class="row form-group">
+                    <div class="col-md-12">
+                      <input type="submit" value=Editar class="btn btn-primary py-2 px-4 text-white">
+                    </div>
+                  </div>
+                </form>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+                  
+  
+    
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="row">
+              <div class="col-md-6">
+                <h2 class="footer-heading mb-4">Acerca de</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident rerum unde possimus molestias dolorem fuga, illo quis fugiat!</p>
+              </div>
+              
+              <div class="col-md-3">
+                <h2 class="footer-heading mb-4">Navegación</h2>
+                <ul class="list-unstyled">
+                  <li><a href="index.html">Inicio</a></li>
+                  <li><a href="listings.html">Perfil </a></li>
+                  <li><a href="contact.html">Contáctenos</a></li>
+                  <li><a href="about.html">Acerca de</a></li>
+                </ul>
+              </div>
+              <div class="col-md-3">
+                <h2 class="footer-heading mb-4">Sigannos en</h2>
+                <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <form action="#" method="post">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Search products..." aria-label="Enter Email" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-primary text-white" type="button" id="button-addon2">Search</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <div class="border-top pt-5">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | No nos robe la idea <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Zapmin</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  {% endblock %}
